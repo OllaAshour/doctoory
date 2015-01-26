@@ -1,0 +1,61 @@
+//Global Variables
+var cityXhr = new XMLHttpRequest();
+
+$(document).ready(function() {
+     getCities();
+});
+
+
+//General Function for Sending Requests 
+function sendRequest(xhr, urlRequest, callbackFn, reqMethod, requestParmaeters) {
+
+    xhr.onreadystatechange = callbackFn;
+
+    if ((reqMethod.toUpperCase()) == ("GET")) {
+        xhr.open("GET", urlRequest, true);
+        xhr.send(null);
+    }
+
+    else {
+        xhr.open("POST", urlRequest, true);
+        xhr.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+        xhr.send(requestParmaeters);
+    }
+}
+
+
+//get Cities on reload
+function getCities() {
+
+   // sendRequest(cityXhr, "http://doctoory.com/front/api/cities", handleCitiesResponse, "GET", null);
+   jQuery.get('cities.json', function(data) {
+   //alert(data);
+	   //process text file line by line
+	   //$('#div').html(data.replace('n','<br />'));
+
+	 var response = JSON.parse(data);
+	 console.log(response);
+  });
+
+}
+
+//CallBack Function for cities
+function handleCitiesResponse() {
+
+    if (cityXhr.readyState == 4) {
+        var response = JSON.parse(cityXhr.responseText);
+
+        console.log(cityXhr.responseText);
+        if (response.exists == true) {
+
+        }
+        else if (response.exists == false) {
+
+        }
+        else {
+
+        }
+    }
+
+
+}

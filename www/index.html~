@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <meta name="format-detection" content="telephone=no" />
+        <meta name="msapplication-tap-highlight" content="no" />
+        <!-- WARNING: for iOS 7, remove the width=device-width and height=device-height attributes. See https://issues.apache.org/jira/browse/CB-4323 -->
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, target-densitydpi=medium-dpi, user-scalable=0" />
+        
+        <link rel="stylesheet" type="text/css" href="css/index.css" />
+        <link href="css/font-awesome.min.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css">
+        <link href="js/select2/select2.css" rel="stylesheet" type="text/css" />
+        <link href="js/mmenu/css/jquery.mmenu.css" type="text/css" rel="stylesheet" />
+        
+        <link rel="stylesheet" type="text/css" href="css/style.css" />
+        
+        <title>Doctoory</title>
+    </head>
+    
+    <body class="body-bg">
+        <div id="wrapper">
+            <div id="my-header">
+                <a class="menu" href="#my-menu"><i class="fa fa-fw fa-bars"></i></a>
+                <div style="clear:both;"></div>
+            </div>
+
+             <div id="my-content" style="padding-top:0;">  
+        <!-- nav-->   
+                <nav id="my-menu">
+                    <section class="mwnu-top"> 
+                        <center><img src="img/logo.png" style="margin-top:3%; width:80%;"/></center>        
+                    </section>
+                   <ul>
+                      <li class="current"><a href="index.html"><i class="fa fa-fw fa-search"></i> بحث</a></li>
+                      <li><a href="adds.html"><i class="fa fa-plus-square-o"></i> العروض الصحية</a></li>
+                      <li><a href="join-us.html"><i class="fa fa-envelope-o"></i> إنضم إلى قائمتنا البريدية</a></li>
+                      
+                      <li class="footer">Operated by <img src="img/Scope-logo.png" style="width:100px;"/> <br> Powered by Intelaqa 2015</li>
+                   </ul>
+                  
+                </nav>
+        <!-- /nav-->
+
+        <!-- logo-->
+               <center><img src="img/logo.png" style="width:250px;"/></center>
+        <!-- /logo--> 
+
+                <div class="col-sm-1 col-xs-1"></div>       
+        <!-- search form-->   
+                <form class="col-sm-10 col-xs-10">
+                   <div class="main-search">
+                    <div class="form-group">                
+                        <select class="sel-city"><option></option><option>الأسكندرية</option><option>القاهرة</option><option>بورسعيد</option><option>طنطا</option></select>
+                    </div> 
+                    <div class="form-group">                
+                        <select class="sel-area"><option></option><option>مصطفى كامل</option><option>سيدي جابر</option><option>فلمنج</option><option>ابوقير</option></select>                
+                    </div>
+                    <div class="form-group">               
+                        <input class="form-control" type="text" placeholder="إسم الدكتور" style="padding: 14px 12px 6px;"/>                
+                    </div>
+                    <div class="form-group">                
+                        <select class="sel-place"><option></option><option>عيادة</option><option>مركز</option><option>مستشفى</option><option></option></select>                                
+                    </div>
+                    <div class="form-group">                
+                        <select class="sel-spec1"><option></option><option>جراحة</option></select>                                
+                    </div>
+                    <div class="form-group">                
+                        <select class="sel-spec2"><option></option><option>تجميل</option></select>                                
+                    </div>
+                   </div>
+                    <center><a href="result.html" class="search-btn"><i class="fa fa-fw fa-search"></i> إبحث </a></center>
+                </form>
+        <!-- /search form-->         
+                <div class="col-sm-1 col-xs-1"></div>
+                <div style="clear:both"></div>
+            </div>   <!-- /content-->  
+               
+  
+       </div>
+<!-- jQuery 2.0.2 -->
+        <script src="js/jquery.min.js"></script>  
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>
+        <script type="text/javascript" src="js/index.js"></script>
+        <script src="js/select2/select2.min.js"></script>
+        <script src="js/select2/select2_locale_ar.js"></script>
+        <script src="js/mmenu/js/jquery.mmenu.min.js" type="text/javascript"></script>
+   
+        <script type="text/javascript">
+            app.initialize();
+            
+             $("#my-menu").mmenu({
+                  // options
+              }, {
+                 // configuration
+                 classNames: {
+                    label: "title"
+                 }
+              });
+            
+            
+            $(".sel-city").select2({
+                placeholder: "إختر المدينة"
+            });
+
+            $(".sel-area").select2({
+                placeholder: "إختر المنطقة"
+            });
+
+            $(".sel-place").select2({
+                placeholder: "المنشأة العلاجية"
+            });
+            
+            $(".sel-spec1").select2({
+                placeholder: "التخصص العام"
+            });
+            
+            $(".sel-spec2").select2({
+                placeholder: "التخصص الخاص"
+            });
+        </script>
+    </body>
+</html>
