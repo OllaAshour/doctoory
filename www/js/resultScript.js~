@@ -13,8 +13,8 @@ $(document).ready(function() {
     var sURLVariables = sPageURL.split('?');
     var requstPar = "http://doctoory.com/front/api/serchhome?"+sURLVariables[1]+"&callback=?";
     
-    displayResults("results.json");
-    //displayResults(requstPar);
+    //displayResults("results.json");
+    displayResults(requstPar);
     
     var sliderIDObjects = $('[id^="more"]');
     sliderIDObjects.on("click", toggleSlide);
