@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <meta name="format-detection" content="telephone=no" />
+        <meta name="msapplication-tap-highlight" content="no" />
+        <!-- WARNING: for iOS 7, remove the width=device-width and height=device-height attributes. See https://issues.apache.org/jira/browse/CB-4323 -->
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, target-densitydpi=medium-dpi, user-scalable=0" />
+        
+        <link rel="stylesheet" type="text/css" href="css/index.css" />
+        <link href="css/font-awesome.min.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css">        
+        <link href="js/mmenu/css/jquery.mmenu.css" type="text/css" rel="stylesheet" />
+        <link href="js/sweeper/idangerous.swiper.css" type="text/css" rel="stylesheet" />
+        <link rel="stylesheet" type="text/css" href="css/style.css" />
+        
+        
+        <script src="http://code.jquery.com/jquery-1.11.2.min.js"></script>
+        <script src="http://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+        
+        <script type="text/javascript" src="js/addsScript.js"></script>
+        
+        <title>Doctoory | العروض الصحية</title>
+        <style>
+        
+  </style>
+    </head>
+    
+    <body class="body-bg">
+    <div id="my-header">
+       <div class="header-container">
+<!-- menu link-->
+        <a class="menu" href="#my-menu"><i class="fa fa-fw fa-bars"></i></a>
+<!-- /menu link-->
+<!-- logo-->
+        <img src="img/logo.png" style="height:50px;"/>
+<!-- /logo-->
+        <div style="clear:both"></div>
+        </div>
+    </div>
+        
+     <div id="my-content" style="padding:0;">  
+<!-- nav-->   
+        <nav id="my-menu">
+          <section class="mwnu-top"> 
+                <center><img src="img/logo.png" style="margin-top:3%; width:80%;"/></center>        
+          </section>
+           <ul>
+              <li><a href="index.html"><i class="fa fa-fw fa-search"></i> بحث</a></li>
+              <li class="current"><a href="adds.html"><i class="fa fa-plus-square-o"></i> العروض الصحية</a></li>
+              <li><a href="join-us.html"><i class="fa fa-envelope-o"></i> إنضم إلى قائمتنا البريدية</a></li>
+               <li class="footer">Operated <img src="img/Scope-logo.png" style="width:100px;"/> <br> Powered by Intelaqa 2015</li>
+           </ul>
+        </nav>
+<!-- /nav-->
+        <a class="arrow-left" href="#"></a> 
+    <a class="arrow-right" href="#"></a>
+        <div class="swiper-container">
+    <div class="swiper-wrapper" id="swiper-wrapper">
+      
+    
+        
+      
+    </div>
+    <div class="pagination"></div>
+  </div>
+   
+   
+   
+    </div>   <!-- /content-->  
+       
+       
+       
+<!-- jQuery 2.0.2 -->
+        <script src="js/sweeper/jquery-1.10.1.min.js"></script>  
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>
+        <script type="text/javascript" src="js/index.js"></script>        
+        <script src="js/mmenu/js/jquery.mmenu.min.js" type="text/javascript"></script>
+        <script src="js/sweeper/idangerous.swiper.js" type="text/javascript"></script>
+       
+        <script type="text/javascript">
+            app.initialize();
+            
+             $("#my-menu").mmenu();            
+            
+            var mySwiper = new Swiper('.swiper-container',{
+                loop: true,
+                calculateHeight:true
+            })
+            $('.arrow-left').on('click', function(e){
+                e.preventDefault()
+                mySwiper.swipePrev()
+            })
+            $('.arrow-right').on('click', function(e){
+                e.preventDefault()
+                mySwiper.swipeNext()
+            })
+            
+                var b= $("body").height();
+                var h= $("#my-header").height();
+                var s= b-h;
+           
+                $(".swiper-container").height(s);
+                $(".swiper-slide").height(s);
+        </script>
+    </body>
+</html>
