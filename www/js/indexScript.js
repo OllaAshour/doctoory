@@ -3,6 +3,7 @@ var allAreas = new Array();
 var allSpecficSpecialities = new Array();
 var allGenSpecialities = new Array();
 
+
 //When Document is ready
 $(document).ready(function() {
     getCities();
@@ -185,7 +186,7 @@ function getGeneralSpecialities() {
         isEmpty = 1;
     }
 
-    //parseAppendDependentJSONData("gsps.json", "#sel-spec1", 4, parentID, isEmpty);
+   //parseAppendDependentJSONData("gsps.json", "#sel-spec1", 4, parentID, isEmpty);
     parseAppendDependentJSONData("http://doctoory.com/front/api/gsps?callback=?", "#sel-spec1", 4, parentID, isEmpty);
 
 
@@ -223,10 +224,11 @@ function getResults() {
 
 }
 
-/*Reset Values when Parent Changes */
+/*Reset Values when Parent Changes,  */
 
 function resetAll() {
 
+    //remove old options
     $('option', $("#sel-area")).remove();
 
     $("#sel-area").append($('<option>'));
